@@ -1,0 +1,28 @@
+
+.upper-upper-head{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1010;
+    height: 4px !important;
+    width: 100%;
+    background-color: rgb(212, 212, 212) !important; 
+  }
+  .upper-upper-head .bg-danger{
+    background-color: #ff3633 !important;
+  }
+  .ctr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+  }
+  .padd {
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+  .heading-ctr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

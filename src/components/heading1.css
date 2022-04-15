@@ -1,0 +1,97 @@
+.content {
+    display: grid;
+    justify-content: center;
+    list-style: none;
+    padding-top: 100px;
+}
+
+.content__item {
+    width: 80%;
+    height: auto;
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.leo {
+    font-size: 60px;
+    position: relative;
+    white-space: nowrap;
+    font-weight: 700;
+}
+
+.leo::before,
+.leo::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    top: 100%;
+    left: 0;
+}
+
+.leo::before {
+    content: '';
+}
+
+.messi::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+}
+
+.messi:hover::before {
+    transform-origin: 0% 50%;
+    transform: scale3d(1, 1, 1);
+}
+
+@media screen and (max-width: 1020px) {
+    .leo {
+        cursor: pointer;
+        font-size: 55px !important;
+        position: relative;
+        white-space: nowrap;
+        font-weight: 700;
+        padding-left: 0px;
+        padding-bottom: -120px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .leo {
+        cursor: pointer;
+        font-size: 45px !important;
+        position: relative;
+        white-space: nowrap;
+        font-weight: 700;
+        padding-left: 0px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .leo {
+        cursor: pointer;
+        font-size: 45px !important;
+        position: relative;
+        white-space: nowrap;
+        font-weight: 700;
+        padding-left: 20px;
+        padding-right: 200px !important;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .leo {
+        cursor: pointer;
+        font-size: 32px !important;
+        position: relative;
+        white-space: nowrap;
+        font-weight: 700;
+        padding-left: 20px;
+        padding-right: 200px !important;
+    }
+}

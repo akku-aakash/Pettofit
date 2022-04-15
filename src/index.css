@@ -1,13 +1,115 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+body::-webkit-scrollbar{
+  width: 0 !important;
+}
+
+* {
+  scroll-behavior: smooth !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+      monospace;
+}
+
+/* .imptoall {
+  margin-top: 10vh;
+  overflow: hidden;
+  width: 100%;
+} */
+
+*:focus {
+  outline: 0 !important;
+}
+
+.searchsu1 {
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0.05);
+  background-image:
+      linear-gradient(90deg,
+          #FFD32E 10px,
+          #EEE 10px,
+          #EEE 11px,
+          transparent 11px);
+  padding: 10px 15px 10px 25px;
+  border: 1px solid #CCC;
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5);
+  margin-bottom: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#query {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 19px;
+  padding: 5px;
+  font-family: calibri light;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+#notebooks {
+  background: whitesmoke;
+  position: absolute;
+  left: 50%;
+  margin-left: -175px;
+  margin-top: 35px;
+  width: 350px;
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 0 white;
+  max-height: 450px;
+}
+
+.searchsu {
+  margin: 0 auto;
+  padding: 0;
+  max-height: 390px;
+  overflow-y: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 5px 5px 0 5px;
+  border-left: none;
+  border-right: none;
+}
+
+#notebooks span {
+  display: block;
+  position: absolute;
+  background: #FFD32E;
+  bottom: -35px;
+  left: -1px;
+  width: 360px;
+  border-radius: 0 0 5px 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: inset 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+:root {
+  --bold-heading: 'Source Sans Pro', sans-serif;
+  --normal-heading: 'Poppins', sans-serif;
+  --normal-text: 'Roboto', sans-serif;
+  --primary-black: #0F151A;
+  --dark-red: #B1434E;
+  --regular-red: #D83D41;
+  --dark-orange: #FF3633;
+  --regular-orange: #FF751F;
+  --light-orange: #FFB23E;
+  --yellow: #FFEF5C;
 }

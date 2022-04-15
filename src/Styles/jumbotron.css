@@ -1,0 +1,42 @@
+.jumbotron{
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(235, 204, 137));
+    margin: auto;
+    height: 15rem;
+    margin-top: 3rem;
+}
+
+.head{
+    margin: auto;
+    margin: 1rem;
+    margin-left: 16%;
+    color: #ffb007;
+    font-size: 2rem;
+}
+.line{
+    margin: auto;
+    margin: 1rem;
+    font-weight: 450;
+    margin-left: 16%;
+}
+
+
+.jumbotron2{
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(235, 204, 137));
+    height: 15rem;
+    padding-top: 3rem;
+    border-top: 3px solid #ffb007;
+}
+
+.head2{
+    margin: auto;
+    margin: 1rem;
+    margin-left: 17%;
+    color: #ffb007;
+    font-size: 2rem;
+}
+.line2{
+    margin: auto;
+    margin: 1rem;
+    font-weight: 450;
+    margin-left: 17%;
+}

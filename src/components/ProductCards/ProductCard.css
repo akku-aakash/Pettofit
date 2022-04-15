@@ -1,0 +1,188 @@
+.productcard-maindiv{
+    margin-left: auto;
+    margin-right: auto;
+}
+.productcard {
+    padding: 24px !important;
+    border-radius: 28px !important;
+    height: 380px;
+    width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    border: none !important;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--normal-heading);
+    -webkit-box-shadow: 7px 9px 69px -42px rgba(0, 0, 0, 0.72);
+    -moz-box-shadow: 7px 9px 69px -42px rgba(0, 0, 0, 0.72);
+    box-shadow: 7px 9px 69px -42px rgba(0, 0, 0, 0.72);
+    transition: 0.25s ease-in-out;
+}
+
+.productcard:hover {
+    transform: scale(1.025);
+    -webkit-box-shadow: 15px 11px 123px -42px rgba(0, 0, 0, 0.72);
+    -moz-box-shadow: 15px 11px 123px -42px rgba(0, 0, 0, 0.72);
+    box-shadow: 15px 11px 123px -42px rgba(0, 0, 0, 0.72);
+}
+
+.productcard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ff3633;
+    clip-path: circle(150px at 80% 20%);
+    z-index: 10;
+    border-radius: 28px;
+    transition: 0.5s ease-in-out;
+}
+
+.productcard:hover::before {
+    clip-path: circle(300px at 80% -20%);
+}
+
+.product-card-content {
+    z-index: 12;
+    text-align: center;
+}
+
+.productcard img {
+    height: 220px;
+    width: 220px;
+    object-fit: contain;
+    z-index: 12;
+    transition: 0.25s ease-in-out;
+}
+
+.productcard h4 {
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 12px;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.productcard p {
+    font-size: 13px;
+    margin-top: -4px;
+    color: rgba(0, 0, 0, 0.65) !important;
+}
+
+.productcard-btn {
+    border: 1px solid #ff3633;
+    background-color: transparent !important;
+    color: #ff3633;
+    border-radius: 8px;
+    padding: 8px 24px;
+    transition: 0.25s ease-in-out;
+}
+
+.productcard-btn:hover {
+    background-color: #ff3633 !important;
+    color: white !important;
+}
+
+.productcard:hover img {
+    transform: scale(0.9) rotate(15deg);
+}
+
+@media screen and (max-width : 1518px) {
+    .productcard {
+        height: 340px;
+        width: 240px;
+    }
+
+    .productcard img {
+        height: 180px;
+        width: 180px;
+    }
+
+    .productcard::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ff3633;
+        clip-path: circle(120px at 80% 20%);
+        z-index: 10;
+        border-radius: 28px;
+        transition: 0.5s ease-in-out;
+    }
+
+    .productcard:hover::before {
+        clip-path: circle(240px at 80% -20%);
+    }
+
+    .productcard h4 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width : 1302px) {
+    .productcard {
+        height: 320px;
+        width: 220px;
+    }
+
+    .productcard img {
+        height: 160px;
+        width: 160px;
+    }
+
+    .productcard::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ff3633;
+        clip-path: circle(110px at 80% 20%);
+        z-index: 10;
+        border-radius: 28px;
+        transition: 0.5s ease-in-out;
+    }
+
+    .productcard h4 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width : 576px) {
+    .productcard {
+        height: 360px;
+        width: 260px;
+    }
+
+    .productcard img {
+        height: 180px;
+        width: 180px;
+    }
+
+    .productcard::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ff3633;
+        clip-path: circle(150px at 80% 20%);
+        z-index: 10;
+        border-radius: 28px;
+        transition: 0.5s ease-in-out;
+    }
+
+    .productcard:hover::before {
+        clip-path: circle(300px at 80% -20%);
+    }
+
+    .productcard h4 {
+        font-size: 20px;
+    }
+}

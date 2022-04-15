@@ -1,0 +1,32 @@
+.cardu{
+    width: 100%;
+}
+.cardu img{
+    width: 100%;
+}
+.cardu1{
+    color: black;
+}
+.cardu1:hover{
+    color: black;
+}
+.cardu h6{
+    margin: 1rem auto 0rem auto;
+    color: black;
+    font-size: 1.4rem;
+}
+.cardu p{
+    color: rgb(81, 81, 83)!important;
+    font-size: 1.3rem;
+}
+@media screen and (max-width: 450px){
+    .cardu h6{
+        margin: 1rem auto 0rem auto;
+        color: black;
+        font-size: 1.04rem;
+    }
+    .cardu p{
+        color: rgb(81, 81, 83)!important;
+        font-size: 1.1rem;
+    }   
+}

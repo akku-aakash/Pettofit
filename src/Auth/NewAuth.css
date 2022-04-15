@@ -1,0 +1,58 @@
+.newauth-col {
+    margin-top: 60px;
+}
+
+.forgotpw-col {
+    margin-top: 100px !important;
+}
+
+.register-col {
+    padding: 40px !important;
+}
+
+.register-divider {
+    margin-bottom: 12px;
+}
+
+.newlogin-btn {
+    border:  none !important;
+    background: transparent !important;
+}
+
+@media screen and (max-width : 1322px) {
+    .newadmin-logininput {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width : 971px) {
+    .newadmin-logininput {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width : 863px) {
+    .newadmin-login-svg-col {
+        display: none !important;
+    }
+
+    .newadmin-logininput {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width : 674px) {
+    .newadmin-logininput {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width : 495px) {
+    .newlogin-col {
+        margin-top: 40px !important;
+    }
+
+    .newadmin-login-form-col {
+        padding: 70px 40px !important;
+    }
+}
