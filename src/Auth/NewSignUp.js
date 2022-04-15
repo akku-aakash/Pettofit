@@ -1,12 +1,10 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { Button, Col, Row } from "react-bootstrap";
-import { Link, useHistory } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify";
-
+import { useNavigate } from "react-router-dom";
 import cjsignup from "../Assests/cj_signup.svg";
 import { HiOutlineMail } from "react-icons/hi";
 import { RiLockPasswordLine } from "react-icons/ri";
-import { TweenMax, Expo, Power4 } from "gsap";
+import { TweenMax, Expo } from "gsap";
 import { MdVisibility, MdVisibilityOff } from "react-icons/md";
 import "../Styles/NewAdminLogin.css";
 import "./NewAuth.css";
@@ -14,19 +12,7 @@ import "./NewAuth.css";
 function NewSignUp() {
   let loginColorDiv = useRef(null);
   let loginFormDiv = useRef(null);
-
-  // useEffect(() => {
-  //   TweenMax.from(loginColorDiv.current, 1, {
-  //     delay: 0,
-  //     opacity: 0,
-  //     x: "-100%",
-  //     ease: Expo.easeInOut,
-  //   });
-  //   TweenMax.from(loginFormDiv.current, 1, {
-  //     delay: 1.2,
-  //     opacity: 0,
-  //   });
-  // }, []);
+  const history = useNavigate()
 
   const onLoginHandler = (event) => {
     event.preventDefault();
@@ -41,7 +27,7 @@ function NewSignUp() {
       ease: Expo.easeInOut,
     });
     setTimeout(() => {
-      // history.push("/login");
+      history("/login");
     }, 750);
   };
 
@@ -63,7 +49,7 @@ function NewSignUp() {
   const [type, setType] = useState("password");
   return (
     <div>
-      <ToastContainer />
+       
       <Row className="newadmin-login-row">
         {" "}
         <Col ref={loginFormDiv} className="newadmin-login-form-col newauth-col">

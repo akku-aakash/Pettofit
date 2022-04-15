@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState, useContext } from "react";
+import React, { useRef, useState } from "react";
 import { Button, Col, Row } from "react-bootstrap";
-import { toast, ToastContainer } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 import cjlogin from "../Assests/cj_login.svg";
 import { FcGoogle } from "react-icons/fc";
 import { HiOutlineMail } from "react-icons/hi";
@@ -10,11 +10,11 @@ import "../Styles/NewAdminLogin.css";
 import { TweenMax, Expo } from "gsap";
 
 
-function NewLogin() {
+const  NewLogin = () => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   let loginColorDiv = useRef(null);
   let loginFormDiv = useRef(null);
-
+  const history = useNavigate()
   const changeHandler = (event) => {
     event.preventDefault();
     const { name, value } = event.target;
@@ -22,7 +22,6 @@ function NewLogin() {
       return { ...prev, [name]: value };
     });
   };
-
 
   const signInHandler = (event) => {
     event.preventDefault();
@@ -33,19 +32,6 @@ function NewLogin() {
     event.preventDefault();
 
   };
-
-  // useEffect(() => {
-  //   TweenMax.from(loginColorDiv.current, 1, {
-  //     delay: 0.2,
-  //     opacity: 0,
-  //     x: "100%",
-  //     ease: Expo.easeInOut,
-  //   });
-  //   TweenMax.from(loginFormDiv.current, 1, {
-  //     delay: 1.2,
-  //     opacity: 0,
-  //   });
-  // }, []);
 
   const onSignUpHandler = (event) => {
     event.preventDefault();
@@ -60,7 +46,7 @@ function NewLogin() {
       ease: Expo.easeInOut,
     });
     setTimeout(() => {
-      // history.push("/signup");
+      history("/signup");
     }, 750);
   };
 
@@ -77,14 +63,13 @@ function NewLogin() {
       ease: Expo.easeInOut,
     });
     setTimeout(() => {
-      // history.push("/forgotpassword");
+      history("/forgotpassword");
     }, 750);
   };
 
   const [type, setType] = useState("password");
   return (
     <div>
-      <ToastContainer />
       <Row className="newadmin-login-row">
         <Col ref={loginColorDiv} className="newadmin-login-svg-col">
           <img

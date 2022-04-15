@@ -1,29 +1,16 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { Button, Col, Row } from "react-bootstrap";
-import { toast, ToastContainer } from "react-toastify";
-
+import { useNavigate } from "react-router-dom";
 import cjforgot from "../Assests/cj_forgotpw.svg";
 import { HiOutlineMail } from "react-icons/hi";
-import { TweenMax, Expo, Power4 } from "gsap";
+import { TweenMax, Expo } from "gsap";
 import "../Styles/NewAdminLogin.css";
 import "./NewAuth.css";
 
 function NewForgotPassword() {
   let loginColorDiv = useRef(null);
   let loginFormDiv = useRef(null);
-
-  useEffect(() => {
-    TweenMax.from(loginColorDiv.current, 1, {
-      delay: 0,
-      opacity: 0,
-      x: "-100%",
-      ease: Expo.easeInOut,
-    });
-    TweenMax.from(loginFormDiv.current, 1, {
-      delay: 1.2,
-      opacity: 0,
-    });
-  }, []);
+  const history = useNavigate()
 
   const onLoginHandler = (event) => {
     event.preventDefault();
@@ -38,7 +25,7 @@ function NewForgotPassword() {
       ease: Expo.easeInOut,
     });
     setTimeout(() => {
-      // history.push("/login");
+      history("/login");
     }, 750);
   };
 
@@ -57,7 +44,6 @@ function NewForgotPassword() {
   
   return (
     <div>
-      <ToastContainer />
       <Row className="newadmin-login-row">
         {" "}
         <Col

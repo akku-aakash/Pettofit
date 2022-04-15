@@ -37,7 +37,7 @@ function News() {
 
   return (
     <div className="parent-news">
-      <ToastContainer />
+       
       <form onSubmit={handleSignUp} className="news_form">
         <div className="form-iitem">
           <input

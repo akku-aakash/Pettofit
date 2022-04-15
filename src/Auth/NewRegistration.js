@@ -1,13 +1,11 @@
-import React, { useState, useRef, useEffect } from "react";
-import { Button, Col, Row,ProgressBar } from "react-bootstrap";
-import { toast, ToastContainer } from "react-toastify";
+import React, { useState, useRef } from "react";
+import { Button, Col, Row, ProgressBar } from "react-bootstrap";
 import cjregister from "../Assests/cj_registration.svg";
 import { HiOutlineMail } from "react-icons/hi";
 import { BiUser } from "react-icons/bi";
 import { BsPhone } from "react-icons/bs";
 import "../Styles/NewAdminLogin.css";
 import "./NewAuth.css";
-import { TweenMax, Expo, Power4 } from "gsap";
 import ImageUpload from "./ImageUpload";
 
 function NewRegistration() {
@@ -21,30 +19,11 @@ function NewRegistration() {
     phoneNo: "",
     image: null,
   });
-  const [progress,setProgress]=useState(0);
-  const [uploading,setUploading]=useState(false);
+  const [progress, setProgress] = useState(0);
+  const [uploading, setUploading] = useState(false);
 
-  useEffect(() => {
-    getUserData();
-  }, []);
 
   const progressInstance = <ProgressBar animated now={progress} label={`${progress}%`} />;
-
-  const getUserData = () => {
-  };
-
-  useEffect(() => {
-    TweenMax.from(loginColorDiv.current, 1, {
-      delay: 0,
-      opacity: 0,
-      x: "-100%",
-      ease: Expo.easeInOut,
-    });
-    TweenMax.from(loginFormDiv.current, 1, {
-      delay: 1.2,
-      opacity: 0,
-    });
-  }, []);
 
   const onChangeHandler = (event) => {
     event.preventDefault();
@@ -62,7 +41,6 @@ function NewRegistration() {
 
   return (
     <div>
-      <ToastContainer />
       <Row className="newadmin-login-row">
         {" "}
         <Col
@@ -73,10 +51,10 @@ function NewRegistration() {
           <p>This is the last thing we'll ask you to do, we promise!</p>
           <hr className="newadmin-logindivider register-divider" />
           <ImageUpload center="true" setData={setUserData} />
-          {progress && uploading &&(
-            <div style={{width:"150px",marginLeft:"auto",marginRight:"auto",marginBottom:"50px"}}>
-          {progressInstance}
-          </div>
+          {progress && uploading && (
+            <div style={{ width: "150px", marginLeft: "auto", marginRight: "auto", marginBottom: "50px" }}>
+              {progressInstance}
+            </div>
           )}
           <label className="newadmin-loginlabel" for="name">
             Name
