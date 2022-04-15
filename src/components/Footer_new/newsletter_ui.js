@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { toast, ToastContainer } from "react-toastify";
 import "./newsletter.css";
 
 function News() {
@@ -27,11 +26,11 @@ function News() {
       if (!response.ok) {
         throw new Error(responseData.message);
       } else {
-        toast.success("Successfully signed up!");
+
         setEmail("");
       }
     } catch (err) {
-      toast.error(err);
+
     }
   };
 

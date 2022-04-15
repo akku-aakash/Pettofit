@@ -8,7 +8,7 @@ import "../Styles/Error.css";
 const Error = () => {
 
   const changee = () => {
-    var arr = []
+
 
   }
 
