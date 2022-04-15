@@ -176,7 +176,7 @@ function Footer() {
       </div>
 
       <section className="copyright">
-        <p>Copyright © 2021, BuyInfo. All rights reserved</p>
+        <p>Copyright © 2021, Pettofit. All rights reserved</p>
       </section>
     </div>
   );

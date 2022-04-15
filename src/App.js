@@ -20,13 +20,13 @@ const App = () => {
     <div style={{ width: "100%", overflow: "hidden" }}>
       <BrowserRouter>
         <Routes>
-          <Route path="/l1"  element={<Loader1 />} />
-          <Route path="/"  element={<Home />} />
-          <Route path="/login"  element={<NewLogin />} />
-          <Route path="/signup"  element={<NewSignUp />} />
-          <Route path="/registration"  element={<NewRegistration />} />
-          <Route path="/forgotpassword"  element={<NewForgotPassword />} />
-          {/* <Route path="" element={<Errorpage />} /> */}
+          <Route path="/l1" exact  element={<Loader1 />} />
+          <Route path="/" exact  element={<Home />} />
+          <Route path="/login" exact  element={<NewLogin />} />
+          <Route path="/signup" exact  element={<NewSignUp />} />
+          <Route path="/registration" exact  element={<NewRegistration />} />
+          <Route path="/forgotpassword" exact  element={<NewForgotPassword />} />
+          <Route path="" element={<Errorpage />} />
         </Routes>
       </BrowserRouter>
     </div>

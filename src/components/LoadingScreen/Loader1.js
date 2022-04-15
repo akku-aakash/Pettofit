@@ -13,7 +13,7 @@ const Loader1 = () => {
         </div>
       </div>
       <div className="loader-heading">
-        <h1 className="headd">BUY INFO.</h1>
+        <h1 className="headd">PETTOFIT</h1>
       </div>
     </div>
   );

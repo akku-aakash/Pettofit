@@ -57,34 +57,6 @@ const Header2 = () => {
     }
   }, []);
 
-  useEffect(() => {
-    $("document").ready(function () {
-      var trigger = $("#search-op"),
-        isClosed = true;
-      var triggerop = $(".search-src");
-
-      if (triggerop && trigger) {
-        trigger.click(function () {
-          burgerTime();
-        });
-
-        function burgerTime() {
-          if (isClosed == true) {
-            // trigger.removeClass("is-open");
-            // trigger.addClass("is-closed");
-            triggerop.addClass("openserach");
-            isClosed = false;
-          } else {
-            // trigger.removeClass("is-closed");
-            // trigger.addClass("is-open");
-            triggerop.removeClass("openserach");
-            isClosed = true;
-          }
-        }
-      }
-    });
-  }, []);
-
   const changebackgroundd = () => {
     if (window.scrollY > 110) {
       const navlinkss = document.querySelector(".hamburger");
@@ -113,7 +85,7 @@ const Header2 = () => {
           <div className="buy-info-head3">
             <ul>
               <Link to="/" className="header-nav-linkk">
-                <h4>BuyInfo</h4>
+                <h4>Pettofit</h4>
               </Link>
             </ul>
           </div>
@@ -125,19 +97,19 @@ const Header2 = () => {
               </Link>
 
               <li className="cate-drop-init">
-                
-                  Categories
-                
+
+                Categories
+
                 <div className="cate-drop-parent">
                   <div className="noob-hook"></div>
                   <div className="noob-profile-op">
                     <ul>
-                    <Link
-                              className="dropdown-link"
-                              to={`/check/products`}
-                            >
-                              <li>Check</li>
-                            </Link>
+                      <Link
+                        className="dropdown-link"
+                        to={`/check/products`}
+                      >
+                        <li>Check</li>
+                      </Link>
                     </ul>
                   </div>
                 </div>
@@ -158,10 +130,10 @@ const Header2 = () => {
               </Link>
 
               <Link to="/login" className="header-nav-linkk">
-                  <div className="autin-div">
-                    <h3>Login</h3>
-                  </div>
-                </Link>
+                <div className="autin-div">
+                  <h3 style={{padding:'0 14px'}}>Login</h3>
+                </div>
+              </Link>
             </ul>
           </div>
         </div>

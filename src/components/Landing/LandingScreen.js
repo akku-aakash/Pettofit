@@ -1,33 +1,10 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import './landingscreen.css'
 import Img1 from '../../Assests/landingscreen/dkk1.png'
 // import Img2 from '../Assests/landingscreen/hee1.png'
 import { TweenMax, Expo } from "gsap";
 
 const LandingScreen = () => {
-    let first = useRef(null);
-    let second = useRef(null);
-    let third = useRef(null);
-
-    useEffect(() => {
-        TweenMax.to(first.current, 1.5, {
-            delay: 0.1,
-            left: "-100%",
-            ease: Expo.easeInOut,
-        });
-
-        TweenMax.to(second.current, 1.5, {
-            delay: 0.2,
-            left: "-100%",
-            ease: Expo.easeInOut,
-        });
-
-        TweenMax.to(third.current, 1.5, {
-            delay: 0.3,
-            left: "-100%",
-            ease: Expo.easeInOut,
-        });
-    }, [])
 
     const chagnerotation = () => {
         if (window.innerWidth > 860) {
@@ -87,13 +64,6 @@ const LandingScreen = () => {
 
     return (
         <div className='land-head'>
-
-            <div ref={first} className="overlay first"></div>
-            <div ref={second} className="overlay second">
-                <h1>BUY INFO.</h1>
-            </div>
-            <div ref={third} className="overlay third"></div>
-
 
             <div className="landing-sc-content">
                 <div className='landing-sc-begin2-min'>

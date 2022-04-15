@@ -5,10 +5,11 @@ import LandingScreen from "../components/Landing/LandingScreen";
 import Header2 from "../components/Header/Header2";
 import Footer from "../components/Footer_new/Footer";
 import { Row, Col } from "react-bootstrap";
-import CategoryCard from "../components/ProductCards/CategoryCard";
+import CategoryCard from "../components/ProductCards/ProductCard";
 
 
 const Home = () => {
+
   return (
     <div className="home-parent-div">
       <div className="imptoall">
@@ -21,20 +22,24 @@ const Home = () => {
               <h1>SMARTPHONES</h1>
             </Col>
           </Row>
+          <br />
+          <br />
           <Row>
-            <Col className="heading-ctr" xl={4}>
+            <Col className="heading-ctr" xl={3}>
               <CategoryCard />
             </Col>
-            <Col className="heading-ctr" xl={4}>
+            <Col className="heading-ctr" xl={3}>
               <CategoryCard />
             </Col>
-            <Col className="heading-ctr" xl={4}>
+            <Col className="heading-ctr" xl={3}>
+              <CategoryCard />
+            </Col>
+            <Col className="heading-ctr" xl={3}>
               <CategoryCard />
             </Col>
           </Row>
         </div>
-        
-
+      
         <Footer />
       </div>
     </div>
